@@ -1,15 +1,20 @@
-// Login Function
 function loginUser(event) {
   event.preventDefault();
   const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
   const role = document.getElementById("role").value;
 
-  // Basic login simulation
-  if (username.trim() !== "") {
+  // Fixed credentials
+  if (role === "admin" && username === "admin" && password === "admin123") {
     localStorage.setItem("userRole", role);
     window.location.href = "dashboard.html";
-  } else {
-    alert("Invalid login");
+  } 
+  else if (role === "user" && username === "user" && password === "user123") {
+    localStorage.setItem("userRole", role);
+    window.location.href = "dashboard.html";
+  } 
+  else {
+    alert("Invalid username or password!");
   }
 }
 
@@ -46,3 +51,4 @@ function addEntry(event) {
 
   document.getElementById("timetableForm").reset();
 }
+
