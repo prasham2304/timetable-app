@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Timetable Manager - KI YA PEA School</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>KI YA PEA School</h1>
+    <nav>
+      <button onclick="logout()">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Time Table Manager</h2>
+    <form id="timetableForm" onsubmit="return addEntry(event)">
+      <label>Day</label>
+      <input type="text" id="day" required>
+
+      <label>Subject</label>
+      <input type="text" id="subject" required>
+
+      <label>Class / Section</label>
+      <input type="text" id="classSection" required>
+
+      <label>Teacher</label>
+      <input type="text" id="teacher" required>
+
+      <label>Optional</label>
+      <input type="text" id="optional">
+
+      <label>Start (HH:MM)</label>
+      <input type="time" id="startTime" required>
+
+      <label>End (HH:MM)</label>
+      <input type="time" id="endTime" required>
+
+      <div class="btn-group">
+        <button type="submit">Add</button>
+        <button type="reset">Clear</button>
+      </div>
+    </form>
+
+    <section>
+      <h3>Generated Timetable</h3>
+      <table id="timetable">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Subject</th>
+            <th>Class / Section</th>
+            <th>Teacher</th>
+            <th>Optional</th>
+            <th>Start</th>
+            <th>End</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
