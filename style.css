@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  background: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+button:hover {
+  background: #45a049;
+}
+
+#timetable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+#timetable th, #timetable td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+#timetable td[contenteditable] {
+  background: #fff3cd;
+}
