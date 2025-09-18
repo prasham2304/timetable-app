@@ -51,4 +51,18 @@ function addEntry(event) {
 
   document.getElementById("timetableForm").reset();
 }
+// Run when page loads
+window.onload = function () {
+  const role = localStorage.getItem("userRole");
+
+  // If user is not admin → hide form
+  if (role !== "admin") {
+    const formSection = document.getElementById("formSection");
+    if (formSection) {
+      formSection.style.display = "none";
+    }
+  }
+};
+
+
 
